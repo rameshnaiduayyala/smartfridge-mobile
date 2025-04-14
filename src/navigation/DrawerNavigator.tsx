@@ -15,13 +15,16 @@ const Stack = createStackNavigator();
 
 // Common header options with menu button
 const screenOptions = ({ navigation }: any) => ({
+    headerStyle: { backgroundColor: '#197F76' }, // Change this to your desired color
+    headerTintColor: 'white', // Ensure the title and icons contrast well
     headerLeft: () => (
         <TouchableOpacity onPress={() => navigation.openDrawer()} style={{ marginLeft: 15 }}>
-            <Ionicons name="menu" size={24} color="black" />
+            <Ionicons name="menu" size={24} color="white" /> {/* Change icon color for contrast */}
         </TouchableOpacity>
     ),
     headerTitleAlign: 'center' as 'center',
 });
+
 
 // Stack Navigator for "Products" Menu
 const ProductsStack = () => {
